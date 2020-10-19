@@ -17,8 +17,8 @@
 body {
   font-family: "Roboto";
 }
-header.v-sheet:nth-child(2) > div:nth-child(1) {
-  background-color: #f4f6fa;
+header.v-sheet:nth-child(3) {
+  background-color: #f4f6fa !important;
 }
 
 header.v-sheet:nth-child(3)

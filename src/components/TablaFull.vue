@@ -82,6 +82,7 @@ body {
 }
 .v-card {
   margin: 3%;
+  min-width: 323.6px;
 }
 .v-data-table-header {
   background-color: #273f70;

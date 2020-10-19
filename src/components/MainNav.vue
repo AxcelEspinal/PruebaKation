@@ -139,6 +139,7 @@ body
   > header:nth-child(1)
   > div:nth-child(1) {
   margin: 0 10mm;
+  margin-right: 0;
 }
 </style>
 

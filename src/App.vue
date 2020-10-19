@@ -1,28 +1,45 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <TopNav />
+    <div class="d-none d-lg-block"><SideDrawer /></div>
+    <NombreClienteNav />
+    <MainNav />
+    <div>
+      <h3>Consulta Cliente Domicilio</h3>
+    </div>
+    <TablaFull />
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TablaFull from "./components/TablaFull";
+import NombreClienteNav from "./components/NombreClienteNav";
+import MainNav from "./components/MainNav";
+import Footer from "./components/Footer";
+import TopNav from "./components/TopNav";
+import SideDrawer from "./components/SideDrawer";
 
 export default {
-  name: 'App',
+  name: "App",
+
   components: {
-    HelloWorld
-  }
-}
+    NombreClienteNav,
+    TablaFull,
+    MainNav,
+    Footer,
+    TopNav,
+    SideDrawer,
+  },
+
+  data: () => ({
+    //
+  }),
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style scoped>
+h3 {
+  margin: 3% 20mm;
 }
 </style>

@@ -1,23 +1,31 @@
 <template>
-  <div>
-    <v-divider></v-divider>
-    <div class="a">
-      Contáctenos | Términos de Uso | Privacidad | Cookies | Seguridad
-    </div>
-    <v-divider></v-divider>
-    <div class="b">© 2018 CLIENTE. All Rights Reserved</div>
-  </div>
+  <v-footer light padless>
+    <v-card class="flex" flat tile>
+      <v-card-title class="teal">
+        <div class="a">
+          Contáctenos | Términos de Uso | Privacidad | Cookies | Seguridad
+        </div>
+
+        <v-spacer></v-spacer>
+
+        <v-btn v-for="icon in icons" :key="icon" class="mx-4" icon>
+          <v-icon size="24px">{{ icon }}</v-icon>
+        </v-btn>
+      </v-card-title>
+
+      <v-divider></v-divider>
+
+      <v-card-text class="b"> © 2018 CLIENTE. All Rights Reserved </v-card-text>
+    </v-card>
+  </v-footer>
 </template>
 
 <style scoped>
 div {
-  margin: 1% 1% 1% 3%;
   color: #797979;
 }
 
-div .a {
-  width: 414px;
-
+.a {
   height: 17px;
 
   color: #797979;
@@ -37,9 +45,7 @@ div .a {
   text-align: left;
 }
 
-div .b {
-  width: 215px;
-
+.b {
   height: 15px;
 
   color: #797979;
@@ -57,3 +63,11 @@ div .b {
   text-align: left;
 }
 </style>
+
+<script>
+export default {
+  data: () => ({
+    icons: ["mdi-facebook", "mdi-youtube", "mdi-instagram"],
+  }),
+};
+</script>
